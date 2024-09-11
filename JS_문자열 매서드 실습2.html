@@ -20,11 +20,12 @@
         <div id="result2">
             값을 넣을 예정입니다.
         </div>
-        <button type="button">문자열 추출</button>
-        <button type="button">문자열 길이</button>
-        <button type="button">대문자 변환</button>
-        <button type="button">문자열 공백제거</button>
-        <button type="button">문자열 합치기</button>
+        <button type="button" onclick = "substrings()">문자열 추출</button>
+        <button type="button" onclick="frm.result.value=inputVal.length()">문자열 길이</button>
+        <button type="button" onclick="frm.result.value=inputVal.toUpperCase()">대문자 변환</button>
+        <button type="button" onclick="frm.result.value=inputVal.trim()">문자열 공백제거</button>
+        <button type="button" onclick="frm.result.value=inputVal.concat()">문자열 합치기</button>
+        <button type="reset">reset</button>
     </form>
   </body>
   <script>
@@ -35,10 +36,9 @@
     function getString(){
         inputVal = string1.value;
         console.log(inputVal);
-        result.value= inputVal.substring(0, 4)+ "년" + inputVal.substring(4, 6) + "월"
-        + inputVal.substring(6, 8) + "일";
-        result2.innerHTML = "결과가 성공적으로 처리되었습니다";
+    }
+    function substring(){
+
     }
   </script>
 </html>
-<!--깃-->
