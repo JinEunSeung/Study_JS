@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                width : 600px;
+                margin:0 auto;
+                background-color : lightgray;
+            }
+            #title{
+                text-align:center;
+                font-size : 64px;
+            }
+            #changeText{
+                width : 100%;
+                height : 40px;
+                color : white;
+                font-size : 24px;
+                background-color : black;
+                border : none;
+                border-radius : 8px;
+            }
+            #content{
+                text-align : center !important;
+                margin-top:20px;
+            }
+            #demo{
+                font-size : 64px;
+                font-weight : 600;
+            }
+            hr{
+                border : none;
+                background-color : black;
+                height : 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="title">
+            Umm.JS
+        </div>
+        <hr>
+        <div id="content">
+            <h2>hi, my name is</h2>
+            <div id="demo">
+                <p id="umm">엄...</p>
+            </div>
+            <button type="button" onclick="changeText()" id="changeText">click here</button>
+        </div>
+        
+        <script>
+            let text1 = document.getElementById("umm");
+            function changeText(){
+                if(text1.innerHTML=="엄..."){
+                    text1.innerHTML="준식!";
+                }
+                else{
+                    text1.innerHTML="엄...";
+                }
+            }
+        </script>
+    </body>
+</html>
