@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>inch, cm 환산</h1>
+    <button type="button" onclick="toCm()">inch->cm</button>
+    <button type="button" onclick="toInch()">cm->inch</button>
+    <h2 id="result"></h2>
+    
+    <script>
+        function toCm(){
+            let inch = prompt("input inch", 3);
+            let cm = inch*2.54;
+            document.getElementById("result").innerHTML = `${inch}inch = ${cm}cm입니다`;
+        }
+        function toInch(){
+            let cm = prompt("ipnut cm", 7.62);
+            let inch = cm/2.54;
+            document.getElementById("result").innerHTML = `${cm}cm = ${inch}inch입니다`;
+        }
+    </script>
+</body>
+</html>
