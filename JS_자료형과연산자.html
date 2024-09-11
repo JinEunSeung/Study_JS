@@ -1,0 +1,81 @@
+<!Doctype html>
+	<head>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            #myInput {
+                background-image: url('' );
+                background-position: 10px 12px;
+                background-repeat: no-repeat;
+                width: 100%;
+                font-size: 16px;
+                padding: 12px 20px 12px 40px;
+                border: 1px solid #ddd;
+                margin-bottom: 12px;
+            }
+
+            #myUL {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            #myUL li a {
+                border: 1px solid #ddd;
+                margin-top: -1px; /* Prevent double borders */
+                background-color: #f6f6f6;
+                padding: 12px;
+                text-decoration: none;
+                font-size: 18px;
+                color: black;
+                display: block
+            }
+
+            #myUL li a:hover:not(.header) {
+               background-color: #eee;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h2>My Phonebook</h2>
+
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+        <ul id="myUL">
+            <li><a href="#">엄준식</a></li>
+            <li><a href="#">박춘자</a></li>
+            <li><a href="#">엄복동</a></li>
+            <li><a href="#">고영희</a></li>
+            <li><a href="#">Chris P.bacon</a></li>
+        </ul>
+
+        <script>
+            function myFunction() {
+            //변수 선언
+                let input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById("myInput");//입력받음
+                filter = input.value.toUpperCase();//필터를 거쳐 대문자로 변환
+                ul = document.getElementById("myUL");//ul선언
+                li = document.querySelectorAll("li");//li선언
+                for(i=0; i<li.length; i++){//li의 길이만큼 반복
+                    // a =
+                    a = li[i].getElementsByTagName("a")[0];
+                    // a의 값에 input 값이 있는지 탐색
+                    txtValue = a.textContent;
+                    //있으면  li[i] 보이게 설정
+                    if(txtValue.toUpperCase().indexOf(filter) > -1){
+                        li[i].style.display = "block";
+                    }
+                    //없으면  li[i] 안보이게 설정
+                    else{
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+        </script>
+
+    </body>
+</html>
