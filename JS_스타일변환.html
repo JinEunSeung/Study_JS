@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width, initial-scale=1.0">
+    <title>글자색 바꾸기</title>
+</head>
+<body>
+    <p>밑에 글자 클릭해보셈</p>
+    <h1 id="heading" onclick="select()">자바스크립트</h1>
+    <h2 id="hide"></h2>
+    <script>
+		function select() {
+            let heading = document.getElementById("heading");
+            if(heading.style.color == "blue") {
+                heading.style.color = "red";
+            }
+            else heading.style.color = "blue";
+            document.getElementById("hide").innerHTML = "아주 클럽이여?";
+        }
+	</script>
+</body>
+</html>
